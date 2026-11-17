@@ -5,6 +5,10 @@
 #define kCFCoreFoundationVersionNumber_iOS_13_0_b2 (1656)
 #define kCFCoreFoundationVersionNumber_iOS_13_0_b1 (1652.20)
 #define kCFCoreFoundationVersionNumber_iOS_14_0_b1 (1740)
+#define kCFCoreFoundationVersionNumber_iOS_15_0    (1858.10)
+#define kCFCoreFoundationVersionNumber_iOS_16_0    (1940.00)
+#define kCFCoreFoundationVersionNumber_iOS_17_0    (2080.00)
+#define kCFCoreFoundationVersionNumber_iOS_18_0    (2200.00)
 
 uint32_t off_p_pid = 0;
 uint32_t off_p_pfd = 0;
@@ -16,6 +20,62 @@ uint32_t off_vnode_usecount = 0;
 uint32_t off_vnode_vflags = 0;
 
 int offset_init() {
+	if(kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_18_0) {
+		// ios 18.x
+		printf("iOS 18.x offset selected!!!\n");
+		off_p_pid = 0x68;
+		off_p_pfd = 0x108;
+		off_fd_ofiles = 0x0;
+		off_fp_fglob = 0x10;
+		off_fg_data = 0x38;
+		off_vnode_iocount = 0x64;
+		off_vnode_usecount = 0x60;
+		off_vnode_vflags = 0x54;
+		return 0;
+	}
+
+	if(kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_17_0) {
+		// ios 17.x
+		printf("iOS 17.x offset selected!!!\n");
+		off_p_pid = 0x68;
+		off_p_pfd = 0x108;
+		off_fd_ofiles = 0x0;
+		off_fp_fglob = 0x10;
+		off_fg_data = 0x38;
+		off_vnode_iocount = 0x64;
+		off_vnode_usecount = 0x60;
+		off_vnode_vflags = 0x54;
+		return 0;
+	}
+
+	if(kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_16_0) {
+		// ios 16.x
+		printf("iOS 16.x offset selected!!!\n");
+		off_p_pid = 0x68;
+		off_p_pfd = 0x108;
+		off_fd_ofiles = 0x0;
+		off_fp_fglob = 0x10;
+		off_fg_data = 0x38;
+		off_vnode_iocount = 0x64;
+		off_vnode_usecount = 0x60;
+		off_vnode_vflags = 0x54;
+		return 0;
+	}
+
+	if(kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_15_0) {
+		// ios 15.x
+		printf("iOS 15.x offset selected!!!\n");
+		off_p_pid = 0x68;
+		off_p_pfd = 0x108;
+		off_fd_ofiles = 0x0;
+		off_fp_fglob = 0x10;
+		off_fg_data = 0x38;
+		off_vnode_iocount = 0x64;
+		off_vnode_usecount = 0x60;
+		off_vnode_vflags = 0x54;
+		return 0;
+	}
+
 	if(kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_14_0_b1) {
 		// ios 14
 		printf("iOS 14.x offset selected!!!\n");
@@ -100,11 +160,6 @@ int init_kernel() {
 		return 1;
   }
 
-//	if(init_tfp0() != KERN_SUCCESS) {
-//		printf("failed get_tfp0!\n");
-//		return 1;
-//	}
-//
 	if(kbase == 0) {
 		printf("failed get_kbase\n");
 		return 1;
