@@ -2,23 +2,46 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>platform-application</key>
-	<true/>
-	<key>com.apple.private.security.container-required</key>
-	<false/>
-	<key>com.apple.springboard.debugapplicationsget-task-allow</key>
-	<true/>
-	<key>com.apple.private.skip-library-validation</key>
-	<true/>
-	<key>proc_info-allow</key>
-	<true/>
-	<key>get-task-allow</key>
-	<true/>
-	<key>task_for_pid-allow</key>
-	<true/>
-	<key>run-unsigned-code</key>
-	<true/>
-	<key>com.apple.private.security.no-container</key>
-	<true/>
+    <key>platform-application</key>
+    <true/>
+    <key>com.apple.private.security.container-required</key>
+    <false/>
+    <key>com.apple.springboard.debugapplicationsget-task-allow</key>
+    <true/>
+    <key>com.apple.private.skip-library-validation</key>
+    <true/>
+    <key>proc_info-allow</key>
+    <true/>
+    <key>get-task-allow</key>
+    <true/>
+    <key>task_for_pid-allow</key>
+    <true/>
+    <key>run-unsigned-code</key>
+    <true/>
+    <key>com.apple.private.security.no-container</key>
+    <true/>
+    <!-- Có thể cần thêm các entitlements sau cho iOS 15+ hoặc rootless nếu cần tương tác sâu hơn với kernel/hệ thống -->
+    <key>com.apple.private.launchservices.can-be-called-by-unprivileged-processes</key>
+    <true/>
+    <key>com.apple.system.library.private-frameworks</key>
+    <true/>
+    <key>com.apple.security.app-sandbox</key>
+    <false/>
+    <key>com.apple.security.get-task-for-pid</key>
+    <true/>
+    <key>com.apple.private.memorystatus</key>
+    <true/>
+    <key>com.apple.security.exception.files.absolute-path.read-write</key>
+    <array>
+        <string>/</string>
+        <string>/var/jb/</string>
+        <string>/tmp/</string>
+    </array>
+    <key>com.apple.security.exception.files.home-relative-path.read-write</key>
+    <array>
+        <string>/</string>
+        <string>/var/jb/</string>
+        <string>/tmp/</string>
+    </array>
 </dict>
 </plist>
