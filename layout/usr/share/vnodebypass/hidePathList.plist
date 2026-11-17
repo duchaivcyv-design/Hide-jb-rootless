@@ -72,5 +72,33 @@
 	<string>/var/mobile/Library/Preferences/jp.akusio.kernbypass.plist</string>
 	<string>/var/mobile/Library/Preferences/jp.akusio.kernbypass-unofficial.plist</string>
 	<string>/var/mobile/Library/Preferences/jp.akusio.kernbypass2.plist</string>
+	<string>/var/jb</string>
+	<string>/var/jb/Applications/Sileo.app</string>
+	<string>/var/jb/Applications/Zebra.app</string>
+	<string>/var/jb/usr/bin/bash</string>
+	<string>/var/jb/usr/bin/dpkg</string>
+	<string>/var/jb/usr/lib/libsubstrate.dylib</string>
+	<string>/var/jb/Library/MobileSubstrate</string>
+	<string>/var/jb/Library/TweakInject</string>
+	<string>/var/jb/Library/PreferenceBundles</string>
+	<string>/var/jb/etc/apt</string>
+	<string>/var/jb/var/lib/apt</string>
+	<string>/var/jb/usr/libexec/cydia</string>
+	<string>/var/jb/var/lib/dpkg</string>
+	<string>/var/jb/usr/local/bin</string>
+	<string>/var/jb/usr/share/terminfo</string>
+	<string>/var/jb/Library/Frameworks/CydiaSubstrate.framework</string>
+	<string>/var/jb/usr/lib/libjailbreak.dylib</string>
+	<string>/var/jb/usr/lib/libsubstitute.dylib</string>
+	<string>/var/jb/usr/lib/substitute-loader.dylib</string>
+	<string>/var/jb/usr/libexec/sftp-server</string>
+	<string>/var/jb/usr/sbin/sshd</string>
+	<string>/var/root/.zshrc</string>
+	<string>/var/root/.bashrc</string>
+	<string>/var/stash</string>
+	<string>/usr/lib/TweakLoader.dylib</string>
+	<string>/var/jb/usr/lib/TweakLoader.dylib</string>
+	<string>/var/jb/usr/lib/pspawn_payload.dylib</string>
+	<string>/usr/lib/pspawn_payload.dylib</string>
 </array>
 </plist>
