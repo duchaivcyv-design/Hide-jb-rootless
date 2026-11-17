@@ -3,8 +3,6 @@
 @interface RootViewController ()
 @end
 
-// ... (các include và interface giữ nguyên) ...
-
 @implementation RootViewController
 
 - (void)loadView {
